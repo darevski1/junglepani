@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <script src="assets/js/bootstrap.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src='https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js' referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: '#mytextarea'
+        });
+        function content() { $("#html_content").val(tinymce.get("mytextarea").getContent()) } function setWidthHeight() { var t = $("<div>" + $("#mytextarea").val() + "</div>"), e = $("#input_width").val(), i = $("#input_height").val(); t.find("#iframe_id").width(e), t.find("#iframe_id").height(i), tinymce.get("mytextarea").setContent(t.html()) } function PutContent() { blog_url = $("#input_blog").val(); var t = $("#input_width").val(), e = $("#input_height").val(); iframe_url = '<iframe src="' + blog_url + '" style="width:' + t + "px; height:" + e + 'px" id="iframe_id"></iframe>', $("#mytextarea").val(iframe_url), tinymce.get("mytextarea").setContent(iframe_url) }
+
+    </script>
+    <title>newpost</title>
+</head>
+
+<body>
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <div class="col-sm-6  col-md-4 text-center left-block">
+                <div class="container mt-10 d-flex align-items-center flex-column">
+
+                    <!-- Masthead Avatar Image -->
+                    <img class="mb-2 img-d" src="#" alt="">
+
+                    <!-- Masthead Heading -->
+                    <h5 class="masthead-heading text-uppercase mb-0 ccgrey">Kuldip</h5>
+
+                    <div class="col-12 mt-10">
+                        <form action="">
+                            <div class="form-group has-search">
+                                <span class="fa fa-search form-control-feedback"></span>
+                                <input type="text" class="form-control-search" placeholder="Search">
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Masthead Subheading -->
+                    <p class="masthead-subheading   mb-0 mt-9 hdhead" data-toggle="modal" data-target="#exampleModal3">
+                        <i class="fa fa-plus"></i> Add new
+                        Category</p>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModal3Label" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModal3Label">
+
+                                        Add new Category</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <form action="">
+                                    <div class="modal-body">
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter new category name"
+                                                class="login-form-control-3">
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-login btn-block">Save</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END Modal -->
+                    <ul class="list-unstyled categorylist">
+                        <li><a href="#">#Integer</a></li>
+                        <li><a href="#">#Facilisaliquet</a></li>
+                        <li><a href="#">#Faucibuvel</a></li>
+                        <li><a href="#">#Facilisretium</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="col-sm-6 col-md-8 rightpanel no-padding left-block">
+
+                <div class="d-flex catheader align-items-center">
+                    <div class="flex-grow-1 ">
+                        <div class="col">
+                            <input type="text" placeholder="Start typing and choose category"
+                                class="login-form-control-4">
+                        </div>
+                    </div>
+                    <div class=""><button class="btn editbtn">edit</button></div>
+                    <div class=""><button class="btn newbtn">NEW POST</button></div>
+                </div>
+
+                <div class="d-flex align-items-center flex-column mb-8" id="hie">
+                    <div class="col">
+                        <h5 class="text-center scgrey">Total number od posts: 44 </h5>
+                        <h5 class="text-center scgrey">Status <i class="fa fa-pencil thead" data-toggle="modal"
+                                data-target="#exampleModal3"></i></h5>
+
+
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog"
+                            aria-labelledby="exampleModal3Label" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModal3Label">Modal title</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal END -->
+
+                        <div class="container">
+                            <div class="row mt-10">
+                                <div class="col-md-4 col-sm-12 mb-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h4 class="card-title" >Special title treatment</h4>
+                                            <p class="card-text">With supporting text below as a natural lead-in to
+                                                additional
+                                                content.</p>
+                                            <a href="#!" class="btn btn-edit btn-block" id="csclick">Edit</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-12 mb-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Special title treatment</h4>
+                                            <p class="card-text">With supporting text below as a natural lead-in to
+                                                additional
+                                                content.</p>
+                                            <a href="#!" class="btn btn-edit btn-block csclick">Edit</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-12 mb-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Special title treatment</h4>
+                                            <p class="card-text">With supporting text below as a natural lead-in to
+                                                additional
+                                                content.</p>
+                                            <a href="#!" class="btn btn-edit btn-block csclick" data-target="3">Edit</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-12 mb-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Special title treatment</h4>
+                                            <p class="card-text">With supporting text below as a natural lead-in to
+                                                additional
+                                                content.</p>
+                                            <a href="#!" class="btn btn-edit btn-block">Edit</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/custom.js"></script>
+
+</body>
+
+</html>

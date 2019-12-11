@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <script src="assets/js/bootstrap.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src='https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js' referrerpolicy="origin"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        tinymce.init({
+            selector: '#mytextarea'
+        });
+        function content() { $("#html_content").val(tinymce.get("mytextarea").getContent()) } function setWidthHeight() { var t = $("<div>" + $("#mytextarea").val() + "</div>"), e = $("#input_width").val(), i = $("#input_height").val(); t.find("#iframe_id").width(e), t.find("#iframe_id").height(i), tinymce.get("mytextarea").setContent(t.html()) } function PutContent() { blog_url = $("#input_blog").val(); var t = $("#input_width").val(), e = $("#input_height").val(); iframe_url = '<iframe src="' + blog_url + '" style="width:' + t + "px; height:" + e + 'px" id="iframe_id"></iframe>', $("#mytextarea").val(iframe_url), tinymce.get("mytextarea").setContent(iframe_url) }
+
+    </script>
+    <title>newpost</title>
+</head>
+
+<body>
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <div class="col-sm-6  col-md-4 text-center left-block">
+                <div class="container mt-10 d-flex align-items-center flex-column">
+
+                    <!-- Masthead Avatar Image -->
+                    <div class="container">
+                            <div class="row no-padding">
+                                    <div class="col-sm-12 no-padding">
+                                            <img id='img-upload' class="mt-3 mb-2 img-d" src="assets/images/index.jpg" />
+        
+                                        </div>
+                                <div class="col-sm-12 no-padding">
+                                        <div class="container">
+                                                <div class="row">
+                                                  <div class="col text-center">
+                                                        <span class="input-group-btn btn btn-upload mb-4">
+                                                                <span class="bts btn-default btn-file text-white">
+                                                                    Browse image <input type="file" id="imgInp">
+                                                                </span>
+                                                            </span>
+                                                   </div>
+                                                </div>
+                                              </div>
+
+                                </div>
+
+                         
+
+                            </div>
+                        </div>
+
+
+                    <!-- Masthead Heading -->
+                    <h5 class="masthead-heading text-uppercase mb-0 ccgrey">Kuldip</h5>
+
+                    <h5 class="text-center scgrey mt-9">Status: Pro <i class="fa fa-pencil thead" data-toggle="modal"
+                            data-target="#Modal3"> Edit</i></h5>
+                    <!-- Modal -->
+                    <div class="modal fade" id="Modal3" tabindex="-1" role="dialog" aria-labelledby="exampleModal3Label"
+                        aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModal3Label">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    ...
+                                </div>
+                                <div class="modal-footer">
+
+                                    <button type="button" class="btn btn-login">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal END -->
+                </div>
+                <ul class="nav flex-column grey lighten-4 py-4 text-center  mt-9" id="navlist">
+                    <li class="nav-item">
+                        <a class="nav-link ullinke" href="#tab_a" data-toggle="pill">Categories/Posts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ullinke" href="#tab_b" data-toggle="pill">Change password</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ullinke" href="#tab_c" data-toggle="pill">Report a problem</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ullinke" href="#tab_d" data-toggle="pill">My subscription</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ullinke" href="#tab_e" data-toggle="pill">Refer a friend</a>
+                    </li>
+                </ul>
+
+
+            </div>
+            <div class="col-sm-6 col-md-8 rightpanel no-padding left-block">
+
+                <div class="tab-content col-md-12">
+
+                    <div class="active tab-pane col mt-10 h-100 anim" id="tab_a">
+                        <h3 class="text-center display-5 mt-4 ">Change or reset your password:</h3>
+                        <hr class="style-one mr-5 ml-5 mb-5">
+                        <h4>Pane A</h4>
+                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+                            ac turpis egestas.</p>
+                    </div>
+                    <div class="tab-pane col mt-10 h-100 anim" id="tab_b">
+                        <h3 class="text-center display-5 mt-4 ">Change or reset your password:</h3>
+                        <hr class="style-one mr-5 ml-5 mb-5">
+                        <div class="col-sm-8 center-center mt-10">
+                            <p class="lead">Lorem ipsum dol is voluptatibus dolores c cumque debitis autem ipsum
+                                veritatis. Unde laboriosam blanditiis ex?</p>
+
+                            <div class="card cards mt-9">
+
+                                <div class="card-body">
+                                    <form class="form-signin">
+                                        <hr class="line-hr-grey">
+
+                                        <input type="password" id="inputEmail" class="login-form-control"
+                                            placeholder="Old Password" autofocus="">
+                                        <hr class="line-hr-grey">
+                                        <input type="password" id="inputEmail" class="login-form-control"
+                                            placeholder="New Password" autofocus="">
+                                        <hr class="line-hr-grey">
+                                        <input type="password" id="inputEmail" class="login-form-control"
+                                            placeholder="New Password Again" autofocus="">
+                                        <hr class="line-hr-grey">
+
+
+                                        <button class="btn btn-block mt-4 btn-pwd" type="submit"><i
+                                                class="fas fa-sign-in-alt"></i>
+                                            Change Password
+                                        </button>
+
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane col mt-10 h-100 anim" id="tab_c">
+                        <h3 class="text-center display-5 mt-4 ">Report a Problem</h3>
+                        <hr class="style-one mr-5 ml-5 mb-5">
+                        <div class="col-sm-8 center-center mt-10 mb-10">
+
+                                <blockquote class="blockquote">
+                                        <p class="mb-0">Describe the problem*:</p>
+                                        <footer class="blockquote-footer"><i class="fa fa-info green" aria-hidden="true"></i> Please provide as much detail as possible so we can better identify the problem
+                                          <cite title="Source Title"><br /><i class="fa fa-info green" aria-hidden="true"></i> What is the exact error message that you received?</cite>
+                                        </footer>
+                                      </blockquote>
+   
+                                <div class="card cards mt-9">
+    
+                                    <div class="card-body">
+                                        <form class="form-signin">
+                                            <hr class="line-hr-grey">
+    
+                                            <input type="text" id="inputEmail" class="login-form-control"
+                                                placeholder="Old Password" autofocus="">
+                                            <hr class="line-hr-grey">
+                                            <input type="text" id="inputEmail" class="login-form-control"
+                                                placeholder="New Password" autofocus="">
+                                            <hr class="line-hr-grey">
+
+                                            <textarea rows="7" cols="50" class="txtarea-2">Please describe the problem....</textarea>
+    
+                                            <button class="btn btn-block mt-4 btn-pwd" type="submit"><i
+                                                    class="fas fa-sign-in-alt"></i>
+                                                Send
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="tab-pane col mt-10 h-100 anim" id="tab_d">
+                        <h3 class="text-center display-5 mt-4 ">Manage subscriptions:</h3>
+                        <hr class="style-one mr-5 ml-5 mb-5">
+                    
+                        <div class="blockc">
+                                <div class=" d-flex align-items-center flex-column">
+
+                                    <h3 class="text-center ccgrey bllu">Jungle Pani Pro</h3>
+                                        <h5 class="text-center bllu">$19.99/Month</h5>
+
+            
+                                </div>
+                            <h3 class="text-center mb-5">Unlimited embedding</h3>
+                            <ul class="subul">
+                                <li><span><i class="fa fa-check-circle checkcol  fa-lg" aria-hidden="true"></i></span> <span class="align-middle">Stay Organzied with multiples categories</span></li>
+                                <li><i class="fa fa-check-circle checkcol fa-lg" aria-hidden="true"></i> Secure Storage For Posts</li>
+                                <li><i class="fa fa-check-circle checkcol  fa-lg" aria-hidden="true"></i> Get Subscribers Without Doing Extra Work</li>
+                                <li><i class="fa fa-check-circle checkcol fa-lg" aria-hidden="true"></i> Save Time and Money on Content Marketing</li>
+                                <li><i class="fa fa-check-circle checkcol fa-lg" aria-hidden="true"></i> Access on any web browser - intagrated with all platforms</li>
+                                <li><i class="fa fa-check-circle checkcol fa-lg" aria-hidden="true"></i> End to End Encryptped, FAST AND SECURE</li>
+                            </ul>
+
+                    
+                        </div>
+                            
+                    <div class=" d-flex align-items-center flex-column">
+                        
+                            <button type="button" class="text-center btn btn-large btn-proplan-btn mt-10 mb-2" data-toggle="modal"
+                            data-target="#exampleModal3">Get a Pro Account</button>
+                        <h4 class="text-center ccgrey mb-5">Cancel Anytime, No Fees, No Contract</h4>
+
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModal3Label" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModal3Label">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    ...
+                                </div>
+                                <div class="modal-footer">
+
+                                    <button type="button" class="btn btn-login">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal END -->
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="Modal3" tabindex="-1" role="dialog" aria-labelledby="exampleModal3Label"
+                        aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModal3Label">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    ...
+                                </div>
+                                <div class="modal-footer">
+
+                                    <button type="button" class="btn btn-login">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal END -->
+                    </div>
+                    <div class="tab-pane col mt-10 h-100 anim" id="tab_e">
+                        <h3 class="text-center display-5 mt-4 ">Our Referral Program:</h3>
+                        <hr class="style-one mr-5 ml-5 mb-5">
+                        <div class="col">
+                            <!-- <h1 class="display-4 font-weight-normal text-center">Our Referral Program</h1> -->
+                            <p class="text-center lead font-weight-normal">And an even wittier subheading to boot.
+                                Jumpstart
+                                your
+                                marketing efforts with this <br />example based on Apple's marketing pages.</p>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <a class="btn btn-outline-secondary btn-lg mt-6" id="showsub" href="#" class="showref">Refer
+                                            a friend, be a better customer</a>
+                                            <div class="col-sm-8 center-center mt-10" id="subscribe">
+                                                <div class="card cards mt-9" >
+                    
+                                                    <div class="card-body">
+                                                        <form class="form-signin">
+                                                            <hr class="line-hr-grey">
+                    
+                                                            <input type="email" id="inputEmail" class="login-form-control"
+                                                                placeholder="E-mail" autofocus="">
+                                                            <hr class="line-hr-grey">
+                                                            <button class="btn btn-block mt-4 btn-pwd" type="submit"><i
+                                                                    class="fas fa-sign-in-alt"></i>
+                                                                Send
+                                                            </button>
+                    
+                    
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div><!-- tab content -->
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+            <script src="assets/js/custom.js"></script>
+</body>
+
+</html>
